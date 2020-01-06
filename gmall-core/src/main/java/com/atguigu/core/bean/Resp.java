@@ -4,6 +4,10 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+/**
+ * 统一响应对象
+ * @param <T>
+ */
 @ApiModel
 @Data
 public class Resp<T> {
@@ -37,10 +41,10 @@ public class Resp<T> {
         return resp;
     }
 
-    public static<T> Resp<T> fail(T data){
+    public static<T> Resp<T> fail(String msg){
         Resp<T> resp = new Resp<T>();
         resp.setCode(1);//操作失败
-        resp.setMsg((String)data);
+        resp.setMsg(msg);
         return resp;
     }
 

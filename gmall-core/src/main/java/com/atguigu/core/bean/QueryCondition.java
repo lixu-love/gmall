@@ -4,7 +4,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-
+/**
+ * 统一接收分页入参对象
+ */
 @ApiModel
 @Data
 public class QueryCondition {
